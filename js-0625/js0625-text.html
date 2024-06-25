@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //血型判斷(大小寫不同)
+        //A→A型
+        //a→A型
+        let blood = prompt('請輸入血型');
+        blood = blood.trim();
+        if (blood == null) {//是否按了取消
+            document.write('按了取消');
+        } else if(blood ==''){ //去除空白的結果是沒有內容
+            document.write('尚未輸入血型');
+        } else if (blood == 'A' || blood =='a') {
+            document.write('A型');
+        } else if (blood == 'B' || blood =='b') {
+            document.write('B型');
+        } else if (blood == 'O' || blood =='o') {
+            document.write('O型');
+        } else if (blood == 'AB' || blood =='Ab' || blood =='aB'|| blood =='ab') {
+            document.write('AB型');
+        } else{
+            document.write('err');
+        }
+        //if-else-if
+        //switch
+    </script>
+</body>
+</html>
