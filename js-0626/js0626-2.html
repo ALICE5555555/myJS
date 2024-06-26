@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex6:請用一個迴圈，找出1-10中，顯示下列結果
+        //1-10中3的倍數有
+        //1-10中3的倍數合計為:3+6+9=18
+        //1-10中5的倍數有
+        //1-10中5的倍數合計為:5+10=15
+
+
+
+        let str3=""; //存放3的倍數內容
+        let str5=""; //存放5的倍數內容
+        let tot3 =0; //存放3的倍數合計
+
+        let str3b = ""; //存放3的倍數內容(帶有+)
+        let str5b = ""; //存放5的倍數內容(帶有+)
+        let tot5 =0; //存放5的倍數合計
+
+        //寫迴圈找出3跟5的倍數
+        for(let i = 1; i <=10; i++){
+            if(i % 3 ===0){
+                //找出3的倍數
+                str3 = str3 + i +' '; //""+3="3"各別保存起來(串接) 3 6 9
+                str3b = str3b + i ; //個別保存起來(串接)3+6+9
+                if(i!=9){
+                    str3b = str3b +"+"; //不是9的時候，才加上+
+                }
+                //累計3的倍數
+                tot3 = tot3+i;
+
+                //演算過程
+                /*
+                    i=3→ tot3=tot3+i=0+3=3
+                    i=6→ tot3=tot3+i=3+6=9
+                    i=3→ tot3=tot3+i=9+9=18
+                */
+            }else if(i % 5 ===0){
+                //找出5的倍數
+                str5 = str5 + i +' '; //各別保存起來(串接)5 10
+                str5b = str5b + i ; //個別保存起來(串接)5+10
+                if(i!=10){
+                    str5b = str5b+'+';
+                }
+                //累計5的倍數
+                tot5 =tot5+i;
+            }
+        }
+
+        //i+=2 →i=i+2   *簡化的+=之間不能空白
+        //i-=2 →i=i-2
+
+        //迴圈結束後再顯示
+        //反引號中的變數要用${變數名}包起來
+        document.write(`1-10中3的倍數→${str3}<br>`); //字串字面值寫法，使用反引號
+        document.write(`1-10中3的倍數合計→${str3b}=${tot3}<br>`);
+        // document.write("1-10中5的倍數→"+str5+"<br>"); //一般串接方式，使用雙引號或單引號串接
+        document.write(`1-10中5的倍數→${str5}<br>`);
+        document.write(`1-10中5的倍數合計→${str5b}=${tot5}<br>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex7:
+        //彈出輸入視窗prompt()
+        //輸入運算起始值→1
+        //輸入運算結束值→10
+        //算出奇數合→1+3+...+9=25
+        //算出偶數合→2+4+...+10=30
+
+        /*
+        let sNum=prompt('起始值');
+        sNum = Number(sNum);
+        */
+        //狀況1:起始值小於結束值
+        let sNum = Number(prompt('請輸入起始值'));
+        let eNum = Number(prompt('請輸入結束值'));
+
+        //狀況2:起始值大於結束值
+        //調換
+        if(sNum>eNum){
+            let tmp=sNum; //大的暫時給tmp
+            sNum=eNum; //小的給sNum
+            eNum=tmp; //大的給eNum
+        }
+        //奇數合
+        let tot1 =0;
+        //偶數合
+        let tot2 =0;
+        for(let i=sNum;i<=eNum;i++){
+            if(i % 2 === 1){
+                //奇數
+                tot1=tot1+i;
+            }else{
+                //偶數
+                tot2=tot2+i;
+            }
+        }
+        console.log(`${sNum}-${eNum}的奇數合→${tot1}`);
+        console.log(`${sNum}-${eNum}的偶數合→${tot2}`);
+
+        
+
+
+    </script>
+</body>
+</html>
