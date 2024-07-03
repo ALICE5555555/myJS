@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //使用break是結束迴圈
+        //使用continue是回到迴圈起始位置
+        
+        //使用continue(忽略下方程式執行)
+        //當程式執行遇到continue時
+        //continue之後的程式碼都不執行
+        //直到回到迴圈起始位置
+
+        //1-100中5的倍數合
+        //for
+        
+        let tot=0;
+        for(let i=1;i<=100;i++){
+            if(i % 5 != 0){
+                continue; //回去起始位置(不是5的倍數就跳回起始位置)
+            }        //有continue意思就和else類似 所以此時不用再用else
+            tot=tot+i  //i是5的倍數時才會進來
+        }
+        console.log(`--for--`)
+        console.log(`1-100中5的倍數合=${tot}`)
+        
+
+        //while
+        tot=0;
+        i=0;
+        while(i<=100){
+            i++;
+            if(i%5!=0){
+                continue;
+            }
+            tot=tot+i;
+        }
+        console.log(`--while--`)
+        console.log(`1-100中5的倍數合=${tot}`)
+
+        //do while
+        tot=0;
+        i=0;
+        do{
+            i++;
+            if(i%5!=0){
+                continue;
+            }
+            tot=tot+i;
+        }while(i<=100)
+        console.log(`--do while--`)
+        console.log(`1-100中5的倍數合=${tot}`)
+    </script>
+</body>
+</html>
