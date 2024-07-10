@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //map()=>將陣列中的值依指定的函式，傳回結果
+        let arr=[1,2,3,4,5];
+        //map()
+        //將arr陣列中的值*2後，回傳=>2,4,6,8,10
+        //for
+        for(let i=0;i<arr.length;i++){
+            console.log(arr[i]*2);
+        }
+
+        let result='';
+        for(i=0;i<arr.length;i++){
+            result= result+(arr[i]*2)+',';  //每次得到的結果和前一個值做串接
+        }
+        console.log(result);
+
+        //map()
+        let arrMapDouble = arr.map((n)=>{
+            return n*2;
+        });
+        console.log(arrMapDouble)
+
+        //將arr陣列中的值轉成字串後，顯示結果
+        //map()
+        console.log(arr); //原數值內容
+        let arrMapString = arr.map((n)=>{
+            return n.toString();
+        });
+        console.log(arrMapString);
+
+        //使用map找出arr陣列中的奇數*5
+        //使用map每一值都會被顯示出來 但是用filter可以做篩選
+        let arrOdd = arr.map((n)=>{
+            if(n%2==1){
+                return n;
+            }
+        });
+        console.log(arrOdd)
+
+        let arrOdds = arr.map((n)=>{
+            if(n%2==1){
+                return n*5;
+            }
+            return n;
+        });
+        console.log(arrOdds)
+
+    </script>
+</body>
+</html>

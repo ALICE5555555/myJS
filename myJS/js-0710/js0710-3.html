@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        //使用陣列的前提:要處理大量資料時
         //只顯示奇數
         //方法一
         //陣列中只保留奇數
@@ -22,6 +23,7 @@
         //陣列中只保留奇數=> filter
         let arr1=[1,3,7,100,234];
         console.log('原陣列內容:'+arr1);
+        //Callback=>箭頭函式
         const odds = arr1.filter((n)=>{
             //檢查是否為奇數
             if(n%2==1){
@@ -32,12 +34,18 @@
             //簡化寫法
             // return n % 2 == 1; //n=1 => 1%2==1 => true
         });
+
+        //再簡化
+        // let odds= arr2.filter((n)=>n % 2==1);
+
         console.log('篩選後的陣列奇數內容:');
         console.log(odds);
         console.log('odds資料型別');
         console.log(typeof(odds));       
         console.log('篩選後原陣列內容:');
         console.log(arr1);
+
+        //Callback=>匿名函式、箭頭函式
 
 
     </script>
