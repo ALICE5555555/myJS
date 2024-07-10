@@ -11,13 +11,13 @@
         //一維陣列=>熟悉度100%
         //二維陣列=>熟悉度50%
         //多維陣列=>知道即可
-        //每個陣列中的值都有編號(索引值)，預設從編號0開始
+        //每個陣列中的值都有編號(索引值/index)，預設從編號0開始
         let arr1=[50, 90, 100, 30, 60]; //編號從頭到尾0-4 長度=最後一個編號+1
         //陣列長度:陣列名稱.length
         console.log('arr1陣列長度:'+arr1.length);
         //取出陣列值:陣列名稱[索引值]
         console.log('arr1陣列編號2的值:'+arr1[2]);
-        //更改陣列值:
+        //更改陣列值:陣列名稱[索引值]=新值
         arr1[2]=99;
         console.log('arr1陣列編號2更改後的值:'+arr1[2]);
 
@@ -27,10 +27,15 @@
         }
         let tot=0;
         for(let i=0;i<arr1.length;i++){
-            //console.log(arr1[i])
-            tot=tot+arr1[i];
+            console.log(arr1[i])
+            // tot=tot+arr1[i];
         }
-        console.log(tot);
+        //console.log(tot);
+
+        for(let i=0;i<=arr1.length-1;i++){
+            console.log(arr1[i])
+            // tot=tot+arr1[i];
+        }
 
         //找出最大值、最小值
         let max=arr1[0]; //max=50
