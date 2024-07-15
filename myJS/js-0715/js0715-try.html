@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //大樂透1-49 猜6個一般號碼+1個特別號(可跟一般號碼重複)
+
+        //r = Math.floor(Math.random() * 49) + 1;
+        //console.log('亂數值' + r1);
+
+
+        let arr1 = [];
+        let r;
+        for (let i = 0; i <= 6; i++) {
+            r = Math.floor(Math.random() * 49) + 1;
+            if (i != 6) {
+                if (arr1.indexOf(r) == -1) {
+                    arr1.push([r]);
+                }
+            }
+            else{
+                r = Math.floor(Math.random() * 49) + 1;
+                arr1.push([r]);
+            }
+        }
+        arr1.sort((a, b) => {
+            return a - b;
+        })
+        console.log('新陣列:' + arr1);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

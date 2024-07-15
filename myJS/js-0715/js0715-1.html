@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //取亂數→0-1之間
+        // let r1 = Math.random();  //如果當下的亂數要保存起來可以丟給變數去做保存
+        // console.log(r1);
+        // console.log(Math.random()); 
+        // console.log(r1);  
+
+        //取亂數→0-1之間
+        let r1 = Math.random();
+        console.log(r1);
+
+        //方法1:小數兩位(使用小數方法)
+        //使用tofixed運算出來結果是 字串! 所以要再轉成數值(用number)
+        console.log(Number(r1.toFixed(2)));
+        //number會保存小數點的資料 parseInt不會保存小數點的資料
+        console.log(parseInt(r1.toFixed(2)));
+
+        //方法2:小數兩位(沒有使用小數方法)
+        //1.先乘100
+        console.log(r1*100);
+        //2.去除小數(floor是無條件捨去)
+        console.log(Math.floor(r1*100));
+        //3.除以100
+        console.log((Math.floor(r1*100))/100);
+        */
+
+        //找出亂數1-5任意值
+        //類別名稱的自首是大寫(Math)
+        /*
+        let r2 = Math.random();
+        console.log(r2);
+        console.log(r2*5);
+        console.log((r2*5)+1);
+        console.log('亂數值:'+(Math.floor(r2*5)+1));
+        */
+        let r2 = Math.floor(Math.random() * 5)+1;
+        console.log('亂數值'+r2);
+
+
+        //宣告一個陣列
+        let arr1=[1,100,50,3,5];
+        console.log('原陣列:'+arr1)
+        //尋找陣列中是否存在
+        //方法一:indexOf(item)
+        //存在→傳回第一次出現的陣列編號
+        //不存在→-1
+        //let result = arr1.indexOf(Math.floor(r2*5)+1);
+        let result =arr1.indexOf(r2);
+        console.log('陣列中尋找的結果indexOf:'+ result);
+        //陣列中若沒有找到亂數值，加入陣列push()
+        if(result == -1){
+            //arr1.push(Math.floor(r2*5)+1);
+            arr1.push(r2);
+            console.log('新陣列:'+arr1);
+        }
+
+        //尋找陣列中是否存在
+        //let result2 = arr1.includes(Math.floor(r2*5)+1);
+        let result2 =arr1.includes(r2);
+        console.log('陣列中尋找的結果includes:'+ result2);
+        if(result == false){
+            //arr1.push(Math.floor(r2*5)+1);
+            arr1.push(r2);
+            console.log('新陣列:'+arr1);
+        }
+        console.log(arr1);
+
+
+
+
+    </script>
+</body>
+</html>
