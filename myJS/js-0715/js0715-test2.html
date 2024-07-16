@@ -77,17 +77,22 @@
         function getRandNum(max) {
             return Math.floor(Math.random() * max) + 1;
         }
-
+        
         //大樂透=>第一區1-49挑6個號碼+第二區1-49挑1個號碼
         //威力彩=>第一區1-38挑6個號碼+第二區1-8挑1個號碼
         //今彩539=>第一區1-39挑5個號碼
-            function getLotNum1() {
+        
+        //item=>樂透代號
+        //count=>第一區的號碼次數
+        //no1=>第一區最大值
+        //no2=>第二區最大值
+            function getLotNum(item,count,no1,no2=0) {
                 let arrNum = [];
                 //取出第一區:6個號碼(1-49)
                 let i = 0;
                 while (i < 6) {
                     //取亂數
-                    let lotNum = getRandNum(49);
+                    let lotNum = getRandNum(no1);
                     //檢查陣列是否存在此號碼
                     if (arrNum.indexOf(lotNum) == -1) {
                         //沒有重複，則加入陣列
@@ -101,52 +106,8 @@
                 });
                 console.log('排序後' + arrNum);
                 //取亂數特別號
-                let speNum = getRandNum1(49);
+                let speNum = getRandNum1(no2);
                 console.log('特別號' + speNum);
-            }
-
-            function getLotNum2() {
-                let arrNum = [];
-                //取出第一區:6個號碼(1-38)
-                let i = 0;
-                while (i < 6) {
-                    //取亂數
-                    let lotNum = getRandNum(38);
-                    //檢查陣列是否存在此號碼
-                    if (arrNum.indexOf(lotNum) == -1) {
-                        //沒有重複，則加入陣列
-                        arrNum.push(lotNum);
-                        i++;
-                    }
-                }
-                console.log('排序前' + arrNum);
-                arrNum.sort((a, b) => {
-                    return a - b;
-                });
-                console.log('排序後' + arrNum);
-                //取亂數特別號
-                let speNum = getRandNum(8);
-            }
-
-            function getLotNum3() {
-                let arrNum = [];
-                //取出第一區:5個號碼(1-39)
-                let i = 0;
-                while (i < 5) {
-                    //取亂數
-                    let lotNum = getRandNum(39);
-                    //檢查陣列是否存在此號碼
-                    if (arrNum.indexOf(lotNum) == -1) {
-                        //沒有重複，則加入陣列
-                        arrNum.push(lotNum);
-                        i++;
-                    }
-                }
-                console.log('排序前' + arrNum);
-                arrNum.sort((a, b) => {
-                    return a - b;
-                });
-                console.log('排序後' + arrNum);
             }
 
         //跳脫字元符號=> \n =>換行
