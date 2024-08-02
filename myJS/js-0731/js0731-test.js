@@ -4,7 +4,7 @@
 
 // for(let i=0;i<myDrinks.length;i++){
 //     console.log(myDrinks.item(i).value);
-//     console.log(myDrinks[i].value);
+//     console.log(myDrinks[i].value)
 // }
 
 //取得勾選的項目內容
