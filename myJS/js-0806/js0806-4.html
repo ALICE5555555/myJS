@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <span onclick="changeToAbout();">關於我</span>
+        <span onclick="changeToExps();">學經歷</span>
+        <span onclick="changeToContact();">聯絡我</span>
+    </div>
+    <hr>
+    <div id="about">大家好,我是xxx</div>
+    <div id="exps" style="display: none;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere corrupti
+        officiis minima assumenda ratione fugiat neque ipsum deserunt, atque cum iure tempore quos cupiditate iste quo
+        doloribus ipsam, reiciendis rem.</div>
+    <div id="contact" style="display: none;">
+        email:123456789@gmail.com<br>
+        mobile:0912344567
+    </div>
+
+    <script>
+        let aboutDiv='';
+        let expsDiv='';
+        let contactDiv='';
+
+        function getDiv() {
+            //1.先取得操作的標籤div
+            let aboutDiv = document.querySelector('#about');
+            let expsDiv = document.querySelector('#exps');
+            let contactDiv = document.querySelector('#contact');
+
+            //2.再對標籤div操作
+            aboutDiv.style.display = 'none';
+            expsDiv.style.display = 'none';
+            contactDiv.style.display = 'none';
+        }
+        //關於我們
+        function changeToAbout() {
+            getDiv();
+            aboutDiv.style.display = 'block';
+        }
+
+        //學經歷
+        function changeToExps() {
+            getDiv();
+            expsDiv.style.display = 'block';
+        }
+
+        //聯絡我
+        function changeToContact() {
+            getDiv();
+            contactDiv.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
