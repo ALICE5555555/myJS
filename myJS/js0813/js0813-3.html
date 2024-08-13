@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            margin: 100px;
+            border: 1px solid red;
+        }
+        .img{
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 換圖效果 -->
+    <div class="wrap">
+        <div>
+            <img onmouseover="changePic();" onmouseout="restorePic();" id="pic" src="../images/joey-huang-QocSP_L-O4M-unsplash.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        function changePic(){
+        //取得換圖的目標
+        let pic= document.getElementById('pic');
+        //換圖
+        pic.src='../images/usj-1914942_1000.jpg'
+        }
+
+        //還原
+        function restorePic(){
+        //取得換圖的目標
+        let pic= document.getElementById('pic');
+        pic.src='../images/joey-huang-QocSP_L-O4M-unsplash.jpg'
+        }
+    </script>
+</body>
+</html>

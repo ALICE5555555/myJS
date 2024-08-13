@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 600px;
+            margin: 0 auto;
+            /* border: 1px solid red; */
+        }
+
+        .picL {
+            width: 600px;
+            height: 450px;
+            margin-bottom: 50px;
+        }
+
+        .picS {
+            /* display: inline-block; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .picS img {
+            width: 198px;
+            height: 125px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 縮圖換大圖 -->
+    <div class="wrap">
+        <!-- 大圖 -->
+        <div>
+            <img id="picL" src="../images/joey-huang-QocSP_L-O4M-unsplash.jpg" alt="">
+        </div>
+        <!-- 縮圖 -->
+        <div class="picS">
+            <img onclick="swap(this.src);" src="../images/nicki-eliza-schinow-BjJP2TN8WoI-unsplash.jpg" alt="">
+            <img onclick="swap(this.src);" src="../images/tom-vining-9zH3AfW7O4o-unsplash.jpg" alt="">
+            <img onclick="swap(this.src);" src="../images/usj-1914942_1000.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        function swap(picSrc){
+            //取得大圖
+            let picL = document.getElementById('picL');
+            picL.src = picSrc;
+        }
+    </script>
+</body>
+
+</html>
